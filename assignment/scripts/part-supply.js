@@ -38,8 +38,8 @@ console.log('6. Showing supplyChanges...');
 
 for (let i=0; i<supplyChanges.length; i += 1) {
     if (supplyChanges[i]>0)console.log('Added',supplyChanges[i],'parts.')
-    else if (supplyChanges[i]===0)console.log('No Change.')
-    else if (supplyChanges[i]<0)console.log('Removed',supplyChanges[i],'parts.')
+    if (supplyChanges[i]===0)console.log('No Change.')
+    if (supplyChanges[i]<0)console.log('Removed',supplyChanges[i],'parts.')
 }
 
 
