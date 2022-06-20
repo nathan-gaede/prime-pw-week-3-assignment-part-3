@@ -55,9 +55,22 @@ for (change of supplyChanges) {
     if(change===0)console.log('No Change.');
     if(change<0)console.log('Removed',change,'parts.');
 }
+
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+
+let totalParts = 0
+    for (i=0; i<supplyChanges.length; i+=1){
+        totalParts += supplyChanges [i];
+    }
+    console.log(totalParts);
+    //Watched a youtube video to understand that a new variable is made, followed by a for loop which runs until the
+    //supplyChanges.length total is reached. The supplyChanges [i] value is the entire array. The totalParts += will 
+    //keep adding to the variable totalParts by the next value in the array starting with the defined value of zero.  
+    
+   
+    
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
@@ -66,3 +79,16 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+
+let partsStash = 572;
+let fullBoxes = 0
+while (partsStash > 6) {
+    
+    partsStash-=7;
+    if (partsStash > 6);
+    fullBoxes += 1;
+}  
+    console.log('Full Boxes:',fullBoxes,'Parts left over:',partsStash);
+    
+    
+    
